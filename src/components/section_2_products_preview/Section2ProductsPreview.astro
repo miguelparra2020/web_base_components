@@ -3,9 +3,25 @@
 ---
 
 <section class="section_2_products_preview">
-  <div class="container_section_2_products_preview">
-    soy la sesión de Products view
+  <div class="section_2_title">Productos en oferta</div>
+  <div class="section_2_subtitle">
+    Encuentra calidad, estilo y ahorro en cada elección
   </div>
+  <br />
+  <br />
+  <div class="section_2_products_ofert">
+    <div class="section_2_products_ofert_group">
+      <div class="section_2_product_item_ofert">item oferta 1</div>
+      <div class="section_2_product_item_ofert">item oferta 2</div>
+    </div>
+    <div class="section_2_products_ofert_group">
+      <div class="section_2_product_item_ofert">item oferta 3</div>
+      <div class="section_2_product_item_ofert">item oferta 4</div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="section_2_products_button">Ver todos los productos</div>
 </section>
 
 <style>
@@ -15,6 +31,90 @@
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    background-color: bisque;
+    flex-direction: column;
+    background-color: white;
+  }
+  .section_2_title {
+    color: var(--tertiary-color);
+    direction: ltr;
+    font-family:
+      Nunito,
+      Arial,
+      Helvetica Neue,
+      Helvetica,
+      sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .section_2_subtitle {
+    color: var(--eight-color);
+    direction: ltr;
+    font-family:
+      Nunito,
+      Arial,
+      Helvetica Neue,
+      Helvetica,
+      sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .section_2_products_ofert {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .section_2_products_ofert_group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+  .section_2_product_item_ofert {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    background-color: aqua;
+  }
+  @media (max-width: 768px) {
+    .section_2_products_ofert {
+      flex-direction: column;
+    }
+    .section_2_product_item_ofert {
+      margin: 10px;
+      width: 160px;
+      height: 160px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .section_2_product_item_ofert {
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+    }
   }
 </style>
